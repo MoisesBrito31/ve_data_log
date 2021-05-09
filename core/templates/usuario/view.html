@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block context %}
+<div class="form-inline">
+    <div class="col">
+        <h1>Usuários</h1>
+    </div>
+    <div class="col text-right">
+        <a class="btn btn-primary" href="{% url 'usuario_add' %}">Novo</a>
+    </div>
+</div>
+<hr>
+<div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Foto</th>
+                <th>nome</th>
+                <th>nivel</th>
+                <th>Criado</th>
+                <th>Modificado</th>
+                <th>ação</th>
+            </tr>
+        </thead>
+        <tbod>
+            {% for u in dados %}
+            <tr>
+                <td><img class="img-thumbnail" src="{{ u.img.thumb.url }}" width="40" height="40" ></td>
+                <td >{{u.nome}}</td>
+                <td>{{u.nivel}}</td>
+                <td>{{u.criado}}</td>
+                <td>{{u.modificado}}</td>
+                <td>
+                    <a class="btn btn-danger" href="{% url 'usuario_delete' %}?id={{u.id}}">Apagar</a>
+                    <a class="btn btn-info" href="{% url 'usuario_edit' %}?id={{u.id}}">Editar</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbod>
+    </table>
+</div>
+
+{% endblock %}
