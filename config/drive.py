@@ -1,4 +1,5 @@
 import socket
+from pyModbusTCP.client import ModbusClient as Modbus
 import os
 from datetime import datetime, timedelta
 from time import sleep
@@ -11,12 +12,15 @@ class Protocol():
     PORT = 32200
     onLine = False
 
-    def __init__(self, ip, port):
+    def __init__(self, ip, port, modbus=False):
         self.IP=ip
         self.PORT = port
         self.trans = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
         try:
             self.trans.connect((self.IP,self.PORT))
+            if modbus:
+                self.mod = Modbus(host=ip,port=502,auto_open=True)
+                self.mod.open()
             self.onLine = True
         except:
             self.onLine = False 
@@ -35,13 +39,20 @@ class Protocol():
                     self.onLine = False
                     return resposta
             resposta = self.trans.recv(self.HEADERSIZE).decode("utf-8")
-            dados_arrey = str(resposta).split(',')
-            cam = Camera.objects.get(ip=self.IP)
-            cam.status= 'Online'
-            cam.reprovado = dados_arrey[4]
-            cam.aprovado = dados_arrey[3]
-            cam.save()
-            return resposta
+            if resposta:
+                dados_arrey = str(resposta).split(',')
+                cam = Camera.objects.get(ip=self.IP)
+                cam.status= 'Online'
+                cam.reprovado = dados_arrey[4]
+                cam.aprovado = dados_arrey[3]
+                cam.save()
+                return resposta
+            else:
+                cam = Camera.objects.get(ip=self.IP)
+                cam.status= 'Offline'
+                cam.save()
+                self.onLine = False 
+                return resposta
         except:
             cam = Camera.objects.get(ip=self.IP)
             cam.status= 'Offline'
@@ -63,41 +74,84 @@ class Protocol():
                     self.onLine = False
                     return resposta
             ret = self.trans.recv(64)
-            frame = int.from_bytes(ret[24:27],"little")
-            isJpeg = int.from_bytes(ret[32:33],"little")
-            img_size = int.from_bytes(ret[20:23],"little")
-            data = self.trans.recv(2048)
-            while img_size>len(data):
-                ret = self.trans.recv(2048)
-                data = data+ret
+            if ret:
+                frame = int.from_bytes(ret[24:27],"little")
+                isJpeg = int.from_bytes(ret[32:33],"little")
+                img_size = int.from_bytes(ret[20:23],"little")
+                data = self.trans.recv(img_size)
+                while img_size>len(data):
+                    ret = self.trans.recv(img_size)
+                    if not ret: break
+                    data = data+ret
 
-            hoje = datetime.now()
-            idcam = self.IP.split('.')
-            nomeFile = f'{hoje.day}{hoje.month}{hoje.year}-{idcam[3]}-{frame}'
-            if isJpeg==1:
-                file = open(f'media\{nomeFile}.jpg','wb')
-                nomeFile = f'{nomeFile}.jpg'
+                hoje = datetime.now()
+                idcam = self.IP.split('.')
+                nomeFile = f'{hoje.day}{hoje.month}{hoje.year}-{idcam[3]}-{frame}'
+                if isJpeg==1:
+                    file = open(f'media\{nomeFile}.jpg','wb')
+                    nomeFile = f'{nomeFile}.jpg'
+                else:
+                    file = open(f'media\{nomeFile}.bmp','wb')
+                    nomeFile = f'{nomeFile}.bmp'
+                file.write(data)
+                file.close()
+                print(f'tamnho do arquivo: {len(data)} bytes')
+                if len(data)>0:
+                    cam = Camera.objects.get(ip=self.IP)
+                    arq = Imagem(camera=cam,data=datetime.now(),img=f'media/{nomeFile}')
+                    cam.status = 'Online'
+                    cam.img = f'media/{nomeFile}'
+                    cam.save()
+                    arq.save()
+                resposta = f'Salvou image {nomeFile}'
+                return resposta
             else:
-                file = open(f'media\{nomeFile}.bmp','wb')
-                nomeFile = f'{nomeFile}.bmp'
-            file.write(data)
-            file.close()
-            print(f'tamnho do arquivo: {len(data)} bytes')
-            if len(data)>0:
+                self.onLine = False
                 cam = Camera.objects.get(ip=self.IP)
-                arq = Imagem(camera=cam,data=datetime.now(),img=f'media/{nomeFile}')
-                cam.status = 'Online'
-                cam.img = f'media/{nomeFile}'
+                cam.status = 'Offline'
                 cam.save()
-                arq.save()
-            resposta = f'Salvou image {nomeFile}'
-            return resposta
+                return resposta
         except Exception as ex:
             print(f'erro {str(ex)}')
             self.onLine = False
             cam = Camera.objects.get(ip=self.IP)
             cam.status = 'Offline'
             cam.save()
+            return resposta
+
+    def read_Modbus(self):
+        resposta = 'falha'
+        try:
+            if not self.onLine:
+                print(f'tentando Conectar...\n')
+                sleep(2)
+                try:
+                    self.mod = Modbus(host=self.ip,port=502,auto_open=True)
+                    self.mod.open()
+                    self.onLine = True
+                except:
+                    self.onLine = False
+                    return resposta
+            resposta = self.mod.read_holding_registers(1000,20) # VE 1
+            if resposta:
+                cam = Camera.objects.get(ip=self.IP)
+                cam.status= 'Online'
+                cam.aprovado = resposta[9]+resposta[10]*65536 # 9-10 VE
+                cam.reprovado = resposta[11]+resposta[12]*65536 # 11-12 VE
+                cam.save()
+                sleep(1)
+                return resposta
+            else:
+                cam = Camera.objects.get(ip=self.IP)
+                cam.status= 'Offline'
+                cam.save()
+                self.onLine = False 
+                return resposta
+        except:
+            cam = Camera.objects.get(ip=self.IP)
+            cam.status= 'Offline'
+            cam.save()
+            self.onLine = False 
             return resposta
 
 

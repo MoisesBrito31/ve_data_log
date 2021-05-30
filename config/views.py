@@ -8,15 +8,16 @@ from threading import Thread
 from django.db.models import Q
 
 #"""
-c1_img=Protocol('192.168.0.1',32200)
-c1_data = Protocol('192.168.0.1',32100)
+c1_img=Protocol('192.168.0.2',32200)
+c1_data = Protocol('192.168.0.2',32100,modbus=True)
+
 def c1_img_loop():
     while True:
         print(c1_img.read_img())
 
 def c1_data_loop():
     while True:
-        c1_data.read_data()
+        c1_data.read_Modbus()
 
 c1_img_thr = Thread(target=c1_img_loop)
 c1_img_thr.start()
