@@ -1,0 +1,6 @@
+[2021-09-14 15:45:02.418515] - [Evento] - drive Contagem Iniciado
+
+[2021-09-14 15:45:23.494837] - [Evento] - tentando se conectar...
+
+[2021-09-14 15:45:46.557786] - [Evento] - tentando se conectar...
+
