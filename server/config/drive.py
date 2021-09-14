@@ -76,10 +76,10 @@ class Protocol():
             idcam = self.IP.split('.')
             nomeFile = f'{hoje.day}{hoje.month}{hoje.year}-{idcam[3]}-{frame}'
             if isJpeg==1:
-                file = open(f'media\{nomeFile}.jpg','wb')
+                file = open(f'media/{nomeFile}.jpg','wb')
                 nomeFile = f'{nomeFile}.jpg'
             else:
-                file = open(f'media\{nomeFile}.bmp','wb')
+                file = open(f'media/{nomeFile}.bmp','wb')
                 nomeFile = f'{nomeFile}.bmp'
             file.write(data)
             file.close()
@@ -101,9 +101,9 @@ class Protocol():
 
 
 sleep(8)
-c1_img=Protocol('192.168.0.1',32200)
+c1_img=Protocol('192.168.0.10',32200)
 
-
+print('iniciou imagem...')
 def c1_img_loop():
     while True:
         print(c1_img.read_img())
