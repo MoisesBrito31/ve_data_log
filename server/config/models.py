@@ -13,6 +13,7 @@ class Camera(Base):
     garrafas = models.IntegerField('Total de Garrafas',default=0)
     faltantes = models.IntegerField('Garrafas Faltantes',default=0)
     img = models.CharField('Ultima Imagem',max_length=200,default='')
+    lastValue = models.IntegerField('última contagem',default=0)
 
     class Meta:
         verbose_name = 'Câmera'
@@ -25,6 +26,7 @@ class Imagem(Base):
     camera=models.ForeignKey(Camera,on_delete=models.CASCADE)
     data = models.DateTimeField('Hora')
     img = models.CharField('Ultima Imagem',max_length=200)
+    garrafas = models.IntegerField('Garrafas Presentes',default=0)
 
     class Meta:
         verbose_name = 'Imagem'

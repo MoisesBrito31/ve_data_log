@@ -53,6 +53,7 @@ class Protocol():
                     self.trans = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
                     self.trans.connect((self.IP,self.PORT))
                     self.onLine = True
+                    gravaLog(msg="Conexão Restabelecida!!")
                 except:
                     self.onLine = False
                     return "falha"
@@ -61,16 +62,22 @@ class Protocol():
                 gravaLog(tipo="Falha de Recepção",msg=f'resposta = {resposta}')
                 self.onLine = False
                 return "falha"
-            dados_arrey = str(resposta).split(',')
-            self.faltantes+= int(dados_arrey[0])
-            self.contagem+= 24-int(dados_arrey[0])
-            if int(dados_arrey[0])>0:
-                self.reprovados+=1    
-            else:
-                self.aprovados+=1
-            self.onLine = True
-            return dados_arrey
-
+            try:
+                dados_arrey = str(resposta).split(',')
+                valorContagem = int(dados_arrey[0])
+                if valorContagem > 24:
+                    valorContagem = 24
+                self.faltantes+= valorContagem
+                self.contagem+= 24-valorContagem
+                if valorContagem>0:
+                    self.reprovados+=1    
+                else:
+                    self.aprovados+=1
+                self.onLine = True
+                return dados_arrey
+            except Exception as ex:
+                gravaLog(tipo="Falha ao analisar resposta",msg=f'resposta = {resposta}, msg = {str(ex)}')
+                return "Falha"
         except Exception as erro:
             gravaLog(tipo="Falha geral da recepção",msg=f'o erro foi {str(erro)}')
             self.onLine = False 

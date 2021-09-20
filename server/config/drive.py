@@ -75,6 +75,7 @@ class Protocol():
                     self.trans = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
                     self.trans.connect((self.IP,self.PORT))
                     self.onLine = True
+                    gravaLog(msg=f'Conexão restabelecida!!')
                 except:
                     self.onLine = False
                     return resposta
@@ -90,6 +91,7 @@ class Protocol():
                         data = data+ret
                     else:
                         gravaLog(tipo="Falha",msg="falha durente recebimento da imagem")
+                        self.onLine = False
                         return "falha durente recebimento da imagem"
                 hoje = datetime.now()
                 idcam = self.IP.split('.')
@@ -103,20 +105,22 @@ class Protocol():
                         nomeFile = f'{nomeFile}.bmp'
                     file.write(data)
                     file.close()
-                    gravaLog(msg=f'tamnho do arquivo: {len(data)} bytes')
-                    print(f'tamnho do arquivo: {len(data)} bytes')
-                    if len(data)>0:
+                    #gravaLog(msg=f'tamnho do arquivo: {len(data)} bytes')
+                    #print(f'tamnho do arquivo: {len(data)} bytes')
+                    if len(data)>65:
                         cam = Camera.objects.get(ip=self.IP)
-                        arq = Imagem(camera=cam,data=datetime.now(),img=f'media/{nomeFile}')
+                        arq = Imagem(camera=cam,data=datetime.now(),img=f'media/{nomeFile}',garrafas=cam.lastValue)
                         cam.img = f'media/{nomeFile}'
                         cam.save()
                         arq.save()
-                    gravaLog(msg=f'Salvou image {nomeFile}')
-                    resposta = f'Salvou image {nomeFile}'
-                    self.onLine = True
-                    return resposta
+                        #gravaLog(msg=f'Salvou image {nomeFile}')
+                        resposta = f'Salvou image {nomeFile}'
+                        self.onLine = True
+                        return resposta
+                    else:
+                        gravaLog(tipo="Falha",msg=f'falha no processamento da img - len(data):{len(data)}')
+                        return "Falha"
                 except Exception as ex:
-                    self.onLine = False
                     gravaLog(tipo="Falha",msg=f'falha na gravação - {str(ex)}')
                     return f'falha na gravação - {str(ex)}'
             else:
