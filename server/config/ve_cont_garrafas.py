@@ -31,6 +31,7 @@ class Protocol():
     aprovados = 0
     reprovados = 0
     def __init__(self, ip, port,faltantes=0,contagem=0,aprovados=0,reprovados=0):
+        self.lastValue =0
         self.faltantes = faltantes
         self.contagem = contagem
         self.aprovados = aprovados
@@ -105,6 +106,7 @@ def gravaBanco():
         cam.aprovado = camera.aprovados
         cam.faltantes = camera.faltantes
         cam.garrafas = camera.contagem
+        cam.lastValue = camera.lastValue
         cam.save()
     except Exception as ex:
        gravaLog(tipo="Falha ao gravar no banco",msg=str(ex),file="log_dados.txt")
