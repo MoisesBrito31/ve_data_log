@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load static %}
+{% block context %}
+<div>
+    <h1>Cadastro de Produto de Distribuição</h1>
+</div>
+<hr>
+<div class="border p-3 m-auto" style="max-width: 600px;">
+    {% if msg == 'gravado' %}
+    <div class="alert alert-success p-3">
+        <strong>Cadastrado com Sucesso</strong>
+    </div>
+    {% endif %}
+    {% if msg == 'falha' %}
+    <div class="alert alert-danger p-3">
+        <strong>Falha ao Gravar no Banco</strong>
+    </div>
+    {% endif %}
+    <form action="{% url 'usuario_add' %}" method="POST" enctype="multipart/form-data" class="form">
+        {% csrf_token %}
+        {% bootstrap_form dados %}
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
+    </form>
+</div>
+
+{% endblock %}

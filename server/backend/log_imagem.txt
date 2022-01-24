@@ -1,0 +1,480 @@
+[2021-12-16 12:21:51.415897] - [Falha] - retorno da imagem veio nula
+
+[2021-12-16 12:21:51.436863] - [Evento] - tentando Conectar...
+
+[2021-12-16 12:21:53.463044] - [Falha] - retorno da imagem veio nula
+
+[2021-12-16 12:21:53.479037] - [Evento] - tentando Conectar...
+
+[2021-12-16 12:21:55.505763] - [Falha] - retorno da imagem veio nula
+
+[2021-12-16 12:21:55.524753] - [Evento] - tentando Conectar...
+
+[2021-12-16 12:21:57.536059] - [Falha] - retorno da imagem veio nula
+
+[2021-12-16 12:21:57.552050] - [Evento] - tentando Conectar...
+
+[2021-12-16 12:21:59.572448] - [Falha] - retorno da imagem veio nula
+
+[2021-12-16 12:21:59.587440] - [Evento] - tentando Conectar...
+
+[2021-12-16 12:22:01.610856] - [Falha] - retorno da imagem veio nula
+
+[2021-12-16 12:22:01.626847] - [Evento] - tentando Conectar...
+
+[2021-12-16 12:22:45.670635] - [Evento] - iniciou imagem...
+
+[2021-12-16 12:23:47.631356] - [Evento] - tamnho do arquivo: 20058 bytes
+
+[2021-12-16 12:23:47.884693] - [Evento] - Salvou image 16122021-11-1695.jpg
+
+[2021-12-16 12:23:47.925668] - [Evento] - tamnho do arquivo: 18769 bytes
+
+[2021-12-16 12:23:48.150538] - [Evento] - Salvou image 16122021-11-1696.jpg
+
+[2021-12-16 12:23:48.163530] - [Evento] - tamnho do arquivo: 18114 bytes
+
+[2021-12-16 12:23:48.433331] - [Evento] - tamnho do arquivo: 19033 bytes
+
+[2021-12-16 12:23:48.577477] - [Evento] - Salvou image 16122021-11-1697.jpg
+
+[2021-12-16 12:23:48.603462] - [Evento] - tamnho do arquivo: 18432 bytes
+
+[2021-12-16 12:23:48.796120] - [Evento] - Salvou image 16122021-10-1714.jpg
+
+[2021-12-16 12:23:48.832097] - [Evento] - tamnho do arquivo: 20164 bytes
+
+[2021-12-16 12:23:49.103147] - [Evento] - Salvou image 16122021-11-1698.jpg
+
+[2021-12-16 12:23:49.363843] - [Evento] - Salvou image 16122021-10-1715.jpg
+
+[2021-12-16 12:23:49.385834] - [Evento] - tamnho do arquivo: 18432 bytes
+
+[2021-12-16 12:23:49.679487] - [Evento] - Salvou image 16122021-10-1716.jpg
+
+[2021-12-16 12:24:17.099391] - [Evento] - tamnho do arquivo: 2639428 bytes
+
+[2021-12-16 12:24:17.433251] - [Evento] - Salvou image 16122021-11-4255733.bmp
+
+[2021-12-16 12:27:20.064572] - [Evento] - iniciou imagem...
+
+[2021-12-16 12:27:56.830824] - [Evento] - tamnho do arquivo: 19691 bytes
+
+[2021-12-16 12:27:57.151920] - [Evento] - Salvou image 16122021-11-2159.jpg
+
+[2021-12-16 12:27:57.188902] - [Evento] - tamnho do arquivo: 18295 bytes
+
+[2021-12-16 12:27:57.482111] - [Evento] - Salvou image 16122021-11-2160.jpg
+
+[2021-12-16 12:27:57.552397] - [Evento] - tamnho do arquivo: 17209 bytes
+
+[2021-12-16 12:27:57.799137] - [Evento] - Salvou image 16122021-11-2161.jpg
+
+[2021-12-16 12:27:57.922327] - [Evento] - tamnho do arquivo: 17822 bytes
+
+[2021-12-16 12:27:58.304967] - [Evento] - Salvou image 16122021-11-2162.jpg
+
+[2021-12-16 12:27:58.333925] - [Evento] - tamnho do arquivo: 17594 bytes
+
+[2021-12-16 12:27:58.578441] - [Evento] - Salvou image 16122021-11-2163.jpg
+
+[2021-12-16 12:27:58.641405] - [Evento] - tamnho do arquivo: 18242 bytes
+
+[2021-12-16 12:27:59.047997] - [Evento] - Salvou image 16122021-11-2164.jpg
+
+[2021-12-16 12:27:59.068986] - [Evento] - tamnho do arquivo: 17696 bytes
+
+[2021-12-16 12:27:59.480060] - [Evento] - Salvou image 16122021-11-2165.jpg
+
+[2021-12-16 12:27:59.501020] - [Evento] - tamnho do arquivo: 16784 bytes
+
+[2021-12-16 12:27:59.728842] - [Evento] - Salvou image 16122021-11-2166.jpg
+
+[2021-12-16 12:27:59.785259] - [Evento] - tamnho do arquivo: 18180 bytes
+
+[2021-12-16 12:28:00.059172] - [Evento] - Salvou image 16122021-11-2167.jpg
+
+[2021-12-16 12:28:00.074163] - [Evento] - tamnho do arquivo: 17872 bytes
+
+[2021-12-16 12:28:00.399048] - [Evento] - Salvou image 16122021-11-2168.jpg
+
+[2021-12-16 12:28:00.424039] - [Evento] - tamnho do arquivo: 17599 bytes
+
+[2021-12-16 12:28:00.694295] - [Evento] - Salvou image 16122021-11-2169.jpg
+
+[2021-12-16 12:28:00.839959] - [Evento] - tamnho do arquivo: 17713 bytes
+
+[2021-12-16 12:28:01.110281] - [Evento] - Salvou image 16122021-11-2170.jpg
+
+[2021-12-16 12:28:01.164002] - [Evento] - tamnho do arquivo: 17411 bytes
+
+[2021-12-16 12:28:01.582118] - [Evento] - Salvou image 16122021-11-2171.jpg
+
+[2021-12-16 12:28:01.664748] - [Evento] - tamnho do arquivo: 17826 bytes
+
+[2021-12-16 12:28:02.095738] - [Evento] - Salvou image 16122021-11-2172.jpg
+
+[2021-12-16 12:28:02.117720] - [Evento] - tamnho do arquivo: 18647 bytes
+
+[2021-12-16 12:28:02.376570] - [Evento] - Salvou image 16122021-11-2173.jpg
+
+[2021-12-16 12:28:02.390562] - [Evento] - tamnho do arquivo: 18449 bytes
+
+[2021-12-16 12:28:02.674950] - [Evento] - Salvou image 16122021-11-2174.jpg
+
+[2021-12-16 12:28:02.685944] - [Evento] - tamnho do arquivo: 17411 bytes
+
+[2021-12-16 12:28:02.966728] - [Evento] - Salvou image 16122021-11-2175.jpg
+
+[2021-12-16 12:28:03.029689] - [Evento] - tamnho do arquivo: 17528 bytes
+
+[2021-12-16 12:28:03.317717] - [Evento] - Salvou image 16122021-11-2176.jpg
+
+[2021-12-16 12:28:03.453722] - [Evento] - tamnho do arquivo: 17046 bytes
+
+[2021-12-16 12:28:03.801493] - [Evento] - Salvou image 16122021-11-2177.jpg
+
+[2021-12-16 12:28:03.816487] - [Evento] - tamnho do arquivo: 16661 bytes
+
+[2021-12-16 12:28:04.285031] - [Evento] - Salvou image 16122021-11-2178.jpg
+
+[2021-12-16 12:28:04.315015] - [Evento] - tamnho do arquivo: 17395 bytes
+
+[2021-12-16 12:28:04.761725] - [Evento] - Salvou image 16122021-11-2179.jpg
+
+[2021-12-16 12:28:04.797706] - [Evento] - tamnho do arquivo: 17784 bytes
+
+[2021-12-16 12:28:05.190907] - [Evento] - Salvou image 16122021-11-2180.jpg
+
+[2021-12-16 12:28:05.204898] - [Evento] - tamnho do arquivo: 18405 bytes
+
+[2021-12-16 12:28:05.505028] - [Evento] - Salvou image 16122021-11-2181.jpg
+
+[2021-12-16 12:28:05.546005] - [Evento] - tamnho do arquivo: 2048 bytes
+
+[2021-12-16 12:28:05.902749] - [Evento] - Salvou image 16122021-11-197121.bmp
+
+[2021-12-16 12:31:49.113541] - [Evento] - tamnho do arquivo: 13898 bytes
+
+[2021-12-16 12:31:49.412683] - [Evento] - Salvou image 16122021-10-2351.jpg
+
+[2021-12-16 12:32:42.300950] - [Evento] - tamnho do arquivo: 12097 bytes
+
+[2021-12-16 12:32:42.640481] - [Evento] - Salvou image 16122021-10-2419.jpg
+
+[2021-12-16 12:32:59.667124] - [Evento] - tamnho do arquivo: 12422 bytes
+
+[2021-12-16 12:33:00.160715] - [Evento] - Salvou image 16122021-10-2515.jpg
+
+[2021-12-16 12:33:16.615020] - [Evento] - tamnho do arquivo: 12986 bytes
+
+[2021-12-16 12:33:16.832194] - [Evento] - Salvou image 16122021-10-2611.jpg
+
+[2021-12-16 12:34:07.330921] - [Evento] - tamnho do arquivo: 13521 bytes
+
+[2021-12-16 12:34:07.898183] - [Evento] - Salvou image 16122021-10-2899.jpg
+
+[2021-12-16 12:34:24.261239] - [Evento] - tamnho do arquivo: 12366 bytes
+
+[2021-12-16 12:34:24.547698] - [Evento] - Salvou image 16122021-10-2995.jpg
+
+[2021-12-16 12:34:33.750773] - [Evento] - tamnho do arquivo: 15087761 bytes
+
+[2021-12-16 12:34:34.100056] - [Evento] - Salvou image 16122021-11-16355834.bmp
+
+[2021-12-16 12:34:41.136283] - [Evento] - tamnho do arquivo: 12095 bytes
+
+[2021-12-16 12:34:41.401990] - [Evento] - Salvou image 16122021-10-3091.jpg
+
+[2021-12-16 12:35:14.785643] - [Evento] - tamnho do arquivo: 12691 bytes
+
+[2021-12-16 12:35:15.055262] - [Evento] - Salvou image 16122021-10-3282.jpg
+
+[2021-12-16 12:35:31.683924] - [Evento] - tamnho do arquivo: 12172 bytes
+
+[2021-12-16 12:35:32.120105] - [Evento] - Salvou image 16122021-10-3378.jpg
+
+[2021-12-16 12:35:51.797812] - [Evento] - tamnho do arquivo: 7393953 bytes
+
+[2021-12-16 12:35:52.075742] - [Evento] - Salvou image 16122021-11-608807.bmp
+
+[2021-12-16 12:35:54.133786] - [Evento] - tamnho do arquivo: 12732 bytes
+
+[2021-12-16 12:35:54.484007] - [Evento] - Salvou image 16122021-10-3474.jpg
+
+[2021-12-16 12:37:56.511782] - [Evento] - tamnho do arquivo: 11467 bytes
+
+[2021-12-16 12:37:56.767312] - [Evento] - Salvou image 16122021-10-3622.jpg
+
+[2021-12-16 12:39:24.860143] - [Evento] - tamnho do arquivo: 11935 bytes
+
+[2021-12-16 12:39:25.134789] - [Evento] - Salvou image 16122021-10-3775.jpg
+
+[2021-12-16 12:39:41.642235] - [Evento] - tamnho do arquivo: 15910 bytes
+
+[2021-12-16 12:39:41.900087] - [Evento] - Salvou image 16122021-10-3871.jpg
+
+[2021-12-16 12:39:58.478697] - [Evento] - tamnho do arquivo: 12311 bytes
+
+[2021-12-16 12:39:58.824013] - [Evento] - Salvou image 16122021-10-3967.jpg
+
+[2021-12-16 12:40:01.087447] - [Evento] - tamnho do arquivo: 13835 bytes
+
+[2021-12-16 12:40:01.438246] - [Evento] - Salvou image 16122021-10-3981.jpg
+
+[2021-12-16 12:40:01.454238] - [Evento] - tamnho do arquivo: 13978 bytes
+
+[2021-12-16 12:40:01.819029] - [Evento] - Salvou image 16122021-10-3983.jpg
+
+[2021-12-16 12:40:02.862847] - [Evento] - tamnho do arquivo: 15753 bytes
+
+[2021-12-16 12:40:03.176746] - [Evento] - Salvou image 16122021-10-3992.jpg
+
+[2021-12-16 12:40:03.187999] - [Evento] - tamnho do arquivo: 14098 bytes
+
+[2021-12-16 12:40:03.588239] - [Evento] - Salvou image 16122021-10-3994.jpg
+
+[2021-12-16 12:40:05.150634] - [Evento] - tamnho do arquivo: 14971 bytes
+
+[2021-12-16 12:40:05.519151] - [Evento] - Salvou image 16122021-10-4005.jpg
+
+[2021-12-16 12:40:06.042677] - [Evento] - tamnho do arquivo: 14793 bytes
+
+[2021-12-16 12:40:06.350499] - [Evento] - Salvou image 16122021-10-4010.jpg
+
+[2021-12-16 12:40:06.364508] - [Evento] - tamnho do arquivo: 15839 bytes
+
+[2021-12-16 12:40:06.602351] - [Evento] - Salvou image 16122021-10-4011.jpg
+
+[2021-12-16 12:40:08.373474] - [Evento] - tamnho do arquivo: 15255 bytes
+
+[2021-12-16 12:40:08.650918] - [Evento] - Salvou image 16122021-10-4023.jpg
+
+[2021-12-16 12:40:08.663912] - [Evento] - tamnho do arquivo: 15131 bytes
+
+[2021-12-16 12:40:09.021874] - [Evento] - Salvou image 16122021-10-4024.jpg
+
+[2021-12-16 12:40:10.429982] - [Evento] - tamnho do arquivo: 14819 bytes
+
+[2021-12-16 12:40:10.772256] - [Evento] - Salvou image 16122021-10-4035.jpg
+
+[2021-12-16 12:40:11.367137] - [Evento] - tamnho do arquivo: 14377 bytes
+
+[2021-12-16 12:40:11.608348] - [Evento] - Salvou image 16122021-10-4040.jpg
+
+[2021-12-16 12:40:12.398531] - [Evento] - tamnho do arquivo: 14569 bytes
+
+[2021-12-16 12:40:12.691835] - [Evento] - Salvou image 16122021-10-4046.jpg
+
+[2021-12-16 12:40:12.718584] - [Evento] - tamnho do arquivo: 13377 bytes
+
+[2021-12-16 12:40:13.075301] - [Evento] - Salvou image 16122021-10-4048.jpg
+
+[2021-12-16 12:40:13.967493] - [Evento] - tamnho do arquivo: 14190 bytes
+
+[2021-12-16 12:40:14.218347] - [Evento] - Salvou image 16122021-10-4055.jpg
+
+[2021-12-16 12:40:14.665090] - [Evento] - tamnho do arquivo: 14150 bytes
+
+[2021-12-16 12:40:14.908113] - [Evento] - Salvou image 16122021-10-4059.jpg
+
+[2021-12-16 12:40:15.960431] - [Evento] - tamnho do arquivo: 14954 bytes
+
+[2021-12-16 12:40:16.304168] - [Evento] - Salvou image 16122021-10-4066.jpg
+
+[2021-12-16 12:40:25.687200] - [Evento] - tamnho do arquivo: 14551 bytes
+
+[2021-12-16 12:40:25.935905] - [Evento] - Salvou image 16122021-10-4122.jpg
+
+[2021-12-16 12:40:29.038834] - [Evento] - tamnho do arquivo: 13321 bytes
+
+[2021-12-16 12:40:29.278479] - [Evento] - Salvou image 16122021-10-4141.jpg
+
+[2021-12-16 12:40:29.429016] - [Evento] - tamnho do arquivo: 14412 bytes
+
+[2021-12-16 12:40:29.678804] - [Evento] - Salvou image 16122021-10-4143.jpg
+
+[2021-12-16 12:40:29.922195] - [Evento] - tamnho do arquivo: 14301 bytes
+
+[2021-12-16 12:40:30.272643] - [Evento] - Salvou image 16122021-10-4146.jpg
+
+[2021-12-16 12:40:30.413551] - [Evento] - tamnho do arquivo: 14848 bytes
+
+[2021-12-16 12:40:30.747359] - [Evento] - Salvou image 16122021-10-4149.jpg
+
+[2021-12-16 12:40:34.387596] - [Evento] - tamnho do arquivo: 13500 bytes
+
+[2021-12-16 12:40:34.687424] - [Evento] - Salvou image 16122021-10-4171.jpg
+
+[2021-12-16 12:40:39.821470] - [Evento] - tamnho do arquivo: 13830 bytes
+
+[2021-12-16 12:40:40.116370] - [Evento] - Salvou image 16122021-10-4202.jpg
+
+[2021-12-16 12:40:40.127364] - [Evento] - tamnho do arquivo: 14551 bytes
+
+[2021-12-16 12:40:40.434596] - [Evento] - Salvou image 16122021-10-4204.jpg
+
+[2021-12-16 12:40:58.450729] - [Evento] - tamnho do arquivo: 14846121 bytes
+
+[2021-12-16 12:40:58.684675] - [Evento] - Salvou image 16122021-11-9589055.bmp
+
+[2021-12-16 12:40:58.716702] - [Evento] - tamnho do arquivo: 18432 bytes
+
+[2021-12-16 12:40:58.957703] - [Evento] - Salvou image 16122021-11-4294.jpg
+
+[2021-12-16 12:43:26.565582] - [Evento] - tamnho do arquivo: 2993209 bytes
+
+[2021-12-16 12:43:26.784156] - [Evento] - Salvou image 16122021-11-1404659.bmp
+
+[2021-12-16 12:46:54.112643] - [Evento] - tamnho do arquivo: 11357 bytes
+
+[2021-12-16 12:46:54.472669] - [Evento] - Salvou image 16122021-10-5578.jpg
+
+[2021-12-16 12:46:54.502687] - [Evento] - tamnho do arquivo: 14617 bytes
+
+[2021-12-16 12:46:54.896702] - [Evento] - Salvou image 16122021-10-5579.jpg
+
+[2021-12-16 12:47:58.801298] - [Evento] - iniciou imagem...
+
+[2021-12-16 12:49:33.246336] - [Evento] - tamnho do arquivo: 26641 bytes
+
+[2021-12-16 12:49:33.531152] - [Evento] - Salvou image 16122021-11-5716.jpg
+
+[2021-12-16 12:50:23.352953] - [Evento] - tamnho do arquivo: 22886 bytes
+
+[2021-12-16 12:50:23.627828] - [Evento] - Salvou image 16122021-11-5721.jpg
+
+[2021-12-16 12:50:23.642821] - [Evento] - tamnho do arquivo: 21875 bytes
+
+[2021-12-16 12:50:24.009598] - [Evento] - Salvou image 16122021-11-5722.jpg
+
+[2021-12-16 13:47:47.616829] - [Evento] - iniciou imagem...
+
+[2021-12-16 13:48:31.295313] - [Evento] - tamnho do arquivo: 19577 bytes
+
+[2021-12-16 13:48:31.567312] - [Evento] - Salvou image 16122021-11-23366.jpg
+
+[2021-12-16 13:51:13.091403] - [Evento] - tamnho do arquivo: 14604 bytes
+
+[2021-12-16 13:51:13.411309] - [Evento] - Salvou image 16122021-10-24348.jpg
+
+[2021-12-16 13:54:20.290911] - [Evento] - tamnho do arquivo: 14583 bytes
+
+[2021-12-16 13:54:20.708577] - [Evento] - Salvou image 16122021-10-25474.jpg
+
+[2021-12-16 13:54:50.373367] - [Evento] - tamnho do arquivo: 14997 bytes
+
+[2021-12-16 13:54:50.621379] - [Evento] - Salvou image 16122021-10-25655.jpg
+
+[2021-12-16 13:54:59.537108] - [Evento] - tamnho do arquivo: 20173 bytes
+
+[2021-12-16 13:54:59.886507] - [Evento] - Salvou image 16122021-11-25702.jpg
+
+[2021-12-16 13:54:59.998510] - [Evento] - tamnho do arquivo: 20410 bytes
+
+[2021-12-16 13:55:00.275657] - [Evento] - Salvou image 16122021-11-25704.jpg
+
+[2021-12-16 13:55:00.291656] - [Evento] - tamnho do arquivo: 20515 bytes
+
+[2021-12-16 13:55:01.016665] - [Evento] - Salvou image 16122021-11-25705.jpg
+
+[2021-12-16 13:55:15.406360] - [Evento] - tamnho do arquivo: 19969 bytes
+
+[2021-12-16 13:55:15.777415] - [Evento] - Salvou image 16122021-11-25796.jpg
+
+[2021-12-16 13:55:15.977394] - [Evento] - tamnho do arquivo: 10629 bytes
+
+[2021-12-16 13:55:16.217375] - [Evento] - Salvou image 16122021-10-25808.jpg
+
+[2021-12-16 13:56:24.382275] - [Evento] - tamnho do arquivo: 19487 bytes
+
+[2021-12-16 13:56:24.680472] - [Evento] - Salvou image 16122021-11-26211.jpg
+
+[2021-12-16 13:57:00.235660] - [Evento] - tamnho do arquivo: 15074 bytes
+
+[2021-12-16 13:57:00.561238] - [Evento] - Salvou image 16122021-10-26436.jpg
+
+[2021-12-16 13:57:13.901769] - [Evento] - tamnho do arquivo: 14667 bytes
+
+[2021-12-16 13:57:14.114792] - [Evento] - Salvou image 16122021-10-26518.jpg
+
+[2021-12-16 13:58:04.143877] - [Evento] - tamnho do arquivo: 14518 bytes
+
+[2021-12-16 13:58:04.446030] - [Evento] - Salvou image 16122021-10-26792.jpg
+
+[2021-12-16 13:58:36.778350] - [Evento] - tamnho do arquivo: 14780 bytes
+
+[2021-12-16 13:58:37.067613] - [Evento] - Salvou image 16122021-10-26860.jpg
+
+[2021-12-16 14:00:56.118471] - [Evento] - tamnho do arquivo: 14491 bytes
+
+[2021-12-16 14:00:56.420538] - [Evento] - Salvou image 16122021-10-27738.jpg
+
+[2021-12-16 14:02:32.595374] - [Evento] - tamnho do arquivo: 14977 bytes
+
+[2021-12-16 14:02:32.817077] - [Evento] - Salvou image 16122021-10-28371.jpg
+
+[2021-12-16 15:24:54.381994] - [Evento] - iniciou imagem...
+
+[2021-12-16 15:25:40.304060] - [Evento] - tamnho do arquivo: 15437 bytes
+
+[2021-12-16 15:25:40.866477] - [Evento] - Salvou image 16122021-10-46193.jpg
+
+[2021-12-16 15:25:44.536708] - [Evento] - tamnho do arquivo: 14757 bytes
+
+[2021-12-16 15:25:44.774483] - [Evento] - Salvou image 16122021-10-46221.jpg
+
+[2021-12-16 15:26:53.846078] - [Evento] - tamnho do arquivo: 15954 bytes
+
+[2021-12-16 15:26:54.142826] - [Evento] - Salvou image 16122021-10-46676.jpg
+
+[2021-12-16 15:27:24.803102] - [Evento] - tamnho do arquivo: 13752 bytes
+
+[2021-12-16 15:27:25.173982] - [Evento] - Salvou image 16122021-10-46879.jpg
+
+[2021-12-16 15:28:25.399307] - [Evento] - tamnho do arquivo: 14997 bytes
+
+[2021-12-16 15:28:25.678977] - [Evento] - Salvou image 16122021-10-47277.jpg
+
+[2021-12-16 15:28:26.793533] - [Evento] - tamnho do arquivo: 14128 bytes
+
+[2021-12-16 15:28:27.141034] - [Evento] - Salvou image 16122021-10-47286.jpg
+
+[2021-12-16 15:31:10.912716] - [Evento] - iniciou imagem...
+
+[2021-12-16 15:31:20.953866] - [Evento] - tamnho do arquivo: 14932 bytes
+
+[2021-12-16 15:31:21.288772] - [Evento] - Salvou image 16122021-10-48428.jpg
+
+[2021-12-16 15:33:19.903605] - [Evento] - tamnho do arquivo: 14290 bytes
+
+[2021-12-16 15:33:20.227317] - [Evento] - Salvou image 16122021-10-49046.jpg
+
+[2021-12-16 15:33:29.184782] - [Evento] - tamnho do arquivo: 14783 bytes
+
+[2021-12-16 15:33:29.506355] - [Evento] - Salvou image 16122021-10-49107.jpg
+
+[2021-12-16 15:33:30.388438] - [Evento] - tamnho do arquivo: 14388 bytes
+
+[2021-12-16 15:33:30.708559] - [Evento] - Salvou image 16122021-10-49115.jpg
+
+[2021-12-16 15:33:55.094928] - [Evento] - tamnho do arquivo: 14585 bytes
+
+[2021-12-16 15:33:55.526870] - [Evento] - Salvou image 16122021-10-49277.jpg
+
+[2021-12-16 15:34:28.047510] - [Evento] - tamnho do arquivo: 14662 bytes
+
+[2021-12-16 15:34:28.525141] - [Evento] - Salvou image 16122021-10-49493.jpg
+
+[2021-12-16 15:34:38.989108] - [Evento] - tamnho do arquivo: 16492 bytes
+
+[2021-12-16 15:34:39.332718] - [Evento] - Salvou image 16122021-10-49565.jpg
+
+[2021-12-16 15:35:03.645087] - [Evento] - tamnho do arquivo: 14175 bytes
+
+[2021-12-16 15:35:03.955534] - [Evento] - Salvou image 16122021-10-49724.jpg
+
+[2021-12-16 15:35:07.011355] - [Evento] - tamnho do arquivo: 14422 bytes
+
+[2021-12-16 15:35:07.598334] - [Evento] - Salvou image 16122021-10-49743.jpg
+

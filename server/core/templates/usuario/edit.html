@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load static %}
+{% block context %}
+<div>
+    <h1>editor de Usuário</h1>
+</div>
+<hr>
+<div class="border p-3 m-auto" style="max-width: 600px;">
+    {% if msg == 'gravado' %}
+    <div class="alert alert-success p-3">
+        <strong>Cadastrado com Sucesso</strong>
+    </div>
+    {% endif %}
+    {% if msg == 'falha' %}
+    <div class="alert alert-danger p-3">
+        <strong>Falha ao Gravar no Banco</strong>
+    </div>
+    {% endif %}
+    <form action="{% url 'usuario_edit' %}" method="POST" enctype="multipart/form-data" class="form">
+        {% csrf_token %}
+        <input hidden id="id" name="id" value="{{ id }}">
+        {% bootstrap_form dados %}
+        <button class="btn btn-primary" type="submit">Alterar</button>
+    </form>
+</div>
+
+{% endblock %}
