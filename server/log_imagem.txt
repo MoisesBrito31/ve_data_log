@@ -981,4 +981,176 @@
 [2022-01-23 13:54:47.032643] - [Evento] - tamnho do arquivo: 14163 bytes
 
 [2022-01-23 13:54:47.050817] - [Evento] - Salvou image 2312022-10-16149.jpg
+
+[2022-01-28 11:58:34.868724] - [Evento] - tamnho do arquivo: 11604 bytes
+
+[2022-01-28 11:58:34.892659] - [Evento] - Salvou image 2812022-10-4.jpg
+
+[2022-01-28 11:58:35.222779] - [Evento] - tamnho do arquivo: 12242 bytes
+
+[2022-01-28 11:58:35.243722] - [Evento] - Salvou image 2812022-10-7.jpg
+
+[2022-01-28 11:58:35.327497] - [Evento] - tamnho do arquivo: 11841 bytes
+
+[2022-01-28 11:58:35.350436] - [Evento] - Salvou image 2812022-10-8.jpg
+
+[2022-01-28 11:58:36.830477] - [Evento] - tamnho do arquivo: 11687 bytes
+
+[2022-01-28 11:58:36.849426] - [Evento] - Salvou image 2812022-10-21.jpg
+
+[2022-01-28 11:58:40.021940] - [Evento] - tamnho do arquivo: 11840 bytes
+
+[2022-01-28 11:58:40.040909] - [Evento] - Salvou image 2812022-10-49.jpg
+
+[2022-01-28 11:58:40.695152] - [Evento] - tamnho do arquivo: 11816 bytes
+
+[2022-01-28 11:58:40.715748] - [Evento] - Salvou image 2812022-10-55.jpg
+
+[2022-01-28 11:58:42.648636] - [Evento] - tamnho do arquivo: 11996 bytes
+
+[2022-01-28 11:58:42.667150] - [Evento] - Salvou image 2812022-10-72.jpg
+
+[2022-01-28 11:58:43.904840] - [Evento] - tamnho do arquivo: 11856 bytes
+
+[2022-01-28 11:58:43.926996] - [Evento] - Salvou image 2812022-10-83.jpg
+
+[2022-01-28 11:58:50.515008] - [Evento] - tamnho do arquivo: 12668 bytes
+
+[2022-01-28 11:58:50.534309] - [Evento] - Salvou image 2812022-10-141.jpg
+
+[2022-01-28 11:58:50.614097] - [Evento] - tamnho do arquivo: 13917 bytes
+
+[2022-01-28 11:58:50.632187] - [Evento] - Salvou image 2812022-10-142.jpg
+
+[2022-01-28 11:58:50.727931] - [Evento] - tamnho do arquivo: 13284 bytes
+
+[2022-01-28 11:58:50.747822] - [Evento] - Salvou image 2812022-10-143.jpg
+
+[2022-01-28 11:58:50.838579] - [Evento] - tamnho do arquivo: 11938 bytes
+
+[2022-01-28 11:58:50.861518] - [Evento] - Salvou image 2812022-10-144.jpg
+
+[2022-01-28 11:58:51.296964] - [Evento] - tamnho do arquivo: 13569 bytes
+
+[2022-01-28 11:58:51.316563] - [Evento] - Salvou image 2812022-10-148.jpg
+
+[2022-01-28 12:00:06.716833] - [Evento] - tamnho do arquivo: 13579 bytes
+
+[2022-01-28 12:00:06.737777] - [Evento] - Salvou image 2812022-10-1037.jpg
+
+[2022-01-28 12:00:06.796621] - [Evento] - tamnho do arquivo: 13589 bytes
+
+[2022-01-28 12:00:06.817571] - [Evento] - Salvou image 2812022-10-1038.jpg
+
+[2022-01-28 12:00:06.878400] - [Evento] - tamnho do arquivo: 12650 bytes
+
+[2022-01-28 12:00:06.900341] - [Evento] - Salvou image 2812022-10-1039.jpg
+
+[2022-01-28 12:00:07.042962] - [Evento] - tamnho do arquivo: 12478 bytes
+
+[2022-01-28 12:00:07.077866] - [Evento] - Salvou image 2812022-10-1041.jpg
+
+[2022-01-28 12:00:07.286309] - [Evento] - tamnho do arquivo: 11383 bytes
+
+[2022-01-28 12:00:07.307255] - [Evento] - Salvou image 2812022-10-1044.jpg
+
+[2022-01-28 12:00:07.365098] - [Evento] - tamnho do arquivo: 12190 bytes
+
+[2022-01-28 12:00:07.384049] - [Evento] - Salvou image 2812022-10-1045.jpg
+
+[2022-01-28 12:00:07.447877] - [Evento] - tamnho do arquivo: 12337 bytes
+
+[2022-01-28 12:00:07.474838] - [Evento] - Salvou image 2812022-10-1046.jpg
+
+[2022-01-28 12:00:07.525669] - [Evento] - tamnho do arquivo: 11050 bytes
+
+[2022-01-28 12:00:07.547642] - [Evento] - Salvou image 2812022-10-1047.jpg
+
+[2022-01-28 12:00:08.175932] - [Evento] - tamnho do arquivo: 11731 bytes
+
+[2022-01-28 12:00:08.202858] - [Evento] - Salvou image 2812022-10-1055.jpg
+
+[2022-01-28 12:00:08.259706] - [Evento] - tamnho do arquivo: 12819 bytes
+
+[2022-01-28 12:00:08.279653] - [Evento] - Salvou image 2812022-10-1056.jpg
+
+[2022-01-28 12:00:08.343482] - [Evento] - tamnho do arquivo: 13353 bytes
+
+[2022-01-28 12:00:08.362431] - [Evento] - Salvou image 2812022-10-1057.jpg
+
+[2022-01-28 12:00:08.425262] - [Evento] - tamnho do arquivo: 12561 bytes
+
+[2022-01-28 12:00:08.445208] - [Evento] - Salvou image 2812022-10-1058.jpg
+
+[2022-01-28 12:00:08.829207] - [Evento] - tamnho do arquivo: 11780 bytes
+
+[2022-01-28 12:00:08.854116] - [Evento] - Salvou image 2812022-10-1063.jpg
+
+[2022-01-28 12:00:08.911008] - [Evento] - tamnho do arquivo: 13114 bytes
+
+[2022-01-28 12:00:08.932905] - [Evento] - Salvou image 2812022-10-1064.jpg
+
+[2022-01-28 12:00:08.986760] - [Evento] - tamnho do arquivo: 12790 bytes
+
+[2022-01-28 12:00:09.008747] - [Evento] - Salvou image 2812022-10-1065.jpg
+
+[2022-01-28 12:00:09.071535] - [Evento] - tamnho do arquivo: 11819 bytes
+
+[2022-01-28 12:00:09.094505] - [Evento] - Salvou image 2812022-10-1066.jpg
+
+[2022-01-28 12:00:09.231107] - [Evento] - tamnho do arquivo: 11982 bytes
+
+[2022-01-28 12:00:09.249092] - [Evento] - Salvou image 2812022-10-1068.jpg
+
+[2022-01-28 12:00:09.314885] - [Evento] - tamnho do arquivo: 12108 bytes
+
+[2022-01-28 12:00:09.335829] - [Evento] - Salvou image 2812022-10-1069.jpg
+
+[2022-01-28 12:00:09.554244] - [Evento] - tamnho do arquivo: 12375 bytes
+
+[2022-01-28 12:00:09.576216] - [Evento] - Salvou image 2812022-10-1072.jpg
+
+[2022-01-28 12:00:09.637023] - [Evento] - tamnho do arquivo: 12280 bytes
+
+[2022-01-28 12:00:09.660956] - [Evento] - Salvou image 2812022-10-1073.jpg
+
+[2022-01-28 12:00:09.717806] - [Evento] - tamnho do arquivo: 11526 bytes
+
+[2022-01-28 12:00:09.740787] - [Evento] - Salvou image 2812022-10-1074.jpg
+
+[2022-01-28 12:00:09.962152] - [Evento] - tamnho do arquivo: 12461 bytes
+
+[2022-01-28 12:00:09.981133] - [Evento] - Salvou image 2812022-10-1077.jpg
+
+[2022-01-28 12:00:10.044930] - [Evento] - tamnho do arquivo: 12358 bytes
+
+[2022-01-28 12:00:10.065874] - [Evento] - Salvou image 2812022-10-1078.jpg
+
+[2022-01-28 12:00:10.209536] - [Evento] - tamnho do arquivo: 14611 bytes
+
+[2022-01-28 12:00:10.236449] - [Evento] - Salvou image 2812022-10-1080.jpg
+
+[2022-01-28 12:00:10.366070] - [Evento] - tamnho do arquivo: 12491 bytes
+
+[2022-01-28 12:00:10.388044] - [Evento] - Salvou image 2812022-10-1082.jpg
+
+[2022-01-28 12:00:10.448874] - [Evento] - tamnho do arquivo: 13259 bytes
+
+[2022-01-28 12:00:10.470792] - [Evento] - Salvou image 2812022-10-1083.jpg
+
+[2022-01-28 12:00:10.540604] - [Evento] - tamnho do arquivo: 12938 bytes
+
+[2022-01-28 12:00:10.565537] - [Evento] - Salvou image 2812022-10-1084.jpg
+
+[2022-01-28 12:00:10.691202] - [Evento] - tamnho do arquivo: 12058 bytes
+
+[2022-01-28 12:00:10.717132] - [Evento] - Salvou image 2812022-10-1086.jpg
+
+[2022-01-28 12:00:10.775975] - [Evento] - tamnho do arquivo: 13568 bytes
+
+[2022-01-28 12:00:10.795965] - [Evento] - Salvou image 2812022-10-1087.jpg
+
+[2022-01-28 12:00:10.933553] - [Evento] - tamnho do arquivo: 13038 bytes
+
+[2022-01-28 12:00:10.956524] - [Evento] - Salvou image 2812022-10-1089.jpg
 

@@ -1,0 +1,83 @@
+{% load static %}
+{% load bootstrap4 %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ titulo }}</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link href="{% static 'css/toastr.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <img class="mr-3" src="{% static 'img/logo-e-service.png' %}" width="120" height="40">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse row" id="navbarsExampleDefault">
+            <div class="col mr-auto">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'cameras' %}">Câmeras</a>
+                    </li>
+                </ul>
+            </div>            
+            {% if titulo != 'Login' %}
+            {% if titulo != 'erro' %}
+            <div id="stsScript" class="navbar-nav ml-auto pr-3 invisible">
+                <span class="text-warning m-auto p-2"><strong>DXM Descalibrado</strong></span>
+                <img class="m-auto" src="{% static 'img/alerta.png' %}" width="30" height="30" />
+            </div>
+            <div class="col text-right text-light">
+                <img class="img-thumbnail" src="{{ user.img.thumb.url }}" width="40" height="40">
+                olá {{ user.nome }}&nbsp; <strong>[&nbsp; <a href="{% url 'logout' %}">Sair</a>&nbsp; ] </strong>
+            </div>
+            {% else %}
+            <strong class="text-light">[&nbsp; <a href="{% url 'logout' %}">Sair</a>&nbsp; ] </strong>
+            {% endif %}
+            {% endif %}
+            <div class="navbar-nav ml-auto pr-3">
+                
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid mb-5 mt-5">
+
+        {% block context %}
+        {% endblock %}
+
+    </div>
+
+    <footer class="footer mt-5 ">
+        <div class="fixed-bottom text-center bg-dark p-2">
+            <span class="text-light">&copy; 2021 - VE.DataLogin</span>
+        </div>
+    </footer>
+
+
+
+    <script src="{% static 'js/jQuerry 3-5-1.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/toastr.js' %}"></script>
+
+    <script>
+        function sair() {
+            var c = document.cookie.split("; ");
+            for (i in c)
+                document.cookie = /^[^=]+/.exec(c[i])[0] + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+            //document.location.href='/login'
+        }
+    </script>
+
+</body>
+
+</html>
