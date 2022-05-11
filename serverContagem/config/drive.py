@@ -7,25 +7,18 @@ from .models import Camera, Imagem
 from .ve_cont_garrafas import camera as Contagem
 import subprocess
 
-try:
-    fi = open("relogio.txt","r")
-    valor = str(fi.read())[2:14]
-    print(valor)
-    comando = subprocess.check_output(['sudo','date',valor])
-    fi.close()
-    print(f'retorno do relogio: {comando}')
-except Exception as ex:
-    print(f'falha em set do relogio: {str(ex)}')
+fim_Programa = threading.Event()
 
 def atualizaRelogio():
-    while True:
+    while not fim_Programa.is_set():
         sleep(10)
-        arquivo = open("relogio.txt","w")
-        a = subprocess.check_output(['sudo','date','+%m%d%H%M%Y'])
-        arquivo.write(str(a[:12]))
-        arquivo.close()
-        
-t_relogio = threading.Thread(target=atualizaRelogio).start()
+        try:
+            arquivo = open("relogio.txt","w")
+            a = subprocess.check_output(['sudo','date','+%m%d%H%M%Y'])
+            arquivo.write(str(a[:12]))
+            arquivo.close()
+        except:
+            pass
 
 def gravaLog(tipo="Evento", msg="", file="log_imagem.txt"):
     try:
@@ -90,7 +83,7 @@ class Protocol():
         resposta = 'falha'
         try:
             if not self.onLine:
-                print(f'tentando Conectar...')
+                print(f'tentando Conectar camera {self.IP}...')
                 gravaLog(msg=f'tentando Conectar...')
                 sleep(2)
                 try:
@@ -174,18 +167,42 @@ class Protocol():
             sleep(2)
             return resposta
 
+def c1_img_loop(cam):
+    print(f'iniciou camera {cam.IP}')
+    while not fim_Programa.is_set():
+        print(cam.read_img())
 
-sleep(8)
-c1_img=Protocol('192.168.0.10',32200)
+def mainCicle():
+    gravaLog(msg='iniciou imagem...')
+    print('iniciou drive...')
+    cameras = []
+    thrs = []
+    camQuery = Camera.objects.all()
+    for c in camQuery:
+        camera = Protocol(c.ip,c.porta_img)
+        thrs.append(Thread(target=c1_img_loop,args=(camera,)))
+    for t in thrs:
+        t.start()
+    t_relogio = threading.Thread(target=atualizaRelogio).start()
+    while not fim_Programa.is_set():
+        cmd = input()
+        if cmd == "end":
+            fim_Programa.set()
+        else:
+            print("comando inexistente")
+    print("fim do programa")
 
-gravaLog(msg='iniciou imagem...')
-print('iniciou imagem...')
-def c1_img_loop():
-    while True:
-        print(c1_img.read_img())
+try:
+    fi = open("relogio.txt","r")
+    valor = str(fi.read())[2:14]
+    print(valor)
+    comando = subprocess.check_output(['sudo','date',valor])
+    fi.close()
+    print(f'retorno do relogio: {comando}')
+except Exception as ex:
+    print(f'falha em set do relogio: {str(ex)}')
 
-c1_img_thr = Thread(target=c1_img_loop)
-c1_img_thr.start()
+t_main = threading.Thread(target=mainCicle).start()
 
 
 
