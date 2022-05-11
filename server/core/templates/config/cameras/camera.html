@@ -9,7 +9,7 @@
         </div>
         <div class="col text-right">
             <div class="btn-group">
-                <button type="button" class="btn btn-primary" onclick="window.location.href='/cameras/'">Fábrica</button>
+                <button type="button" class="btn btn-primary" onclick="window.location.href='/cameras/'">Inspetor</button>
                 <button type="button" class="btn btn-primary disabled">ao vivo</button>               
                 <button type="button" class="btn btn-primary" onclick="window.location.href='/cameras/hist/{{dados.id}}/'">Histórico</button>
             </div>
@@ -18,34 +18,27 @@
 </div>
 
 <hr>
-<div class="container-fluid row m-auto">
-    <div class="col-alto">
-        <img id="img" src="/{{dados.img}}" height="500px">
+<div class="container-fluid">
+    <div class="row text-center m-auto">
+        <div class="col-auto text-center m-auto">
+            <h4>Última Falha</h4>
+            <img id="img" src="/{{dados.img}}" height="300">
+        </div>
+        <div class="col-auto text-center m-auto">
+            <h4>Ao Vivo</h4>
+		<img id="img aovivo" src="/media/{{dados.live}}live.jpg" height="300">
+            <!--iframe src="http://{{dados.ip}}/liveimage.html" height="500" width="590"></iframe-->
+        </div>
     </div>
-    <div class="col-auto m-auto">
-        <div class="row">
-            <div class="col text-center form-group">
-                <div class="text-center h3">Total de Garr.</div>
-               <span id="gar" class="text-success h3">{{dados.total}}</span> 
-            </div>
-            <div class="col text-center form-group">
-                <div class="text-center h3">Garr. Faltantes</div>
-                <span id="fal" class="text-danger h3">{{dados.faltantes}}</span> 
-            </div>
+    <div class="row text-center m-auto">
+        <div  class="col-auto text-center m-auto mt-3 pt-3">
+            <h2><p>Aprovados : <span id="apr" class="text-success"></span></p></h4>
+            <h2><p>Reprovados : <span id="rep" class="text-danger"></span></p></h4>
         </div>
-        <div class="row mb-5 mt-5 pt-5 pb-5">
-            <div class="col text-center form-group">
-                <div class="text-center h3">Cx. Aprovadas</div>
-               <span id="apr" class="text-success h3">{{dados.aprovado}}</span> 
-            </div>
-            <div class="col text-center form-group">
-                <div class="text-center h3">Cx. Reprovadas</div>
-                <span id="rep" class="text-danger h3">{{dados.reprovado}}</span> 
-            </div>
-        </div>
-       
     </div>
 </div>
+    
+    
 
 <script>
     setInterval(function () {
@@ -69,9 +62,10 @@
                     data = JSON.parse(res)
                     document.getElementById(`apr`).innerHTML = data.aprovado
                     document.getElementById(`rep`).innerHTML = data.reprovado
-                    document.getElementById('gar').innerHTML = data.total
-                    document.getElementById('fal').innerHTML = data.faltantes                  
+                    //document.getElementById('gar').innerHTML = data.total
+                    //document.getElementById('fal').innerHTML = data.faltantes                  
                     document.getElementById(`img`).setAttribute("src",`/${data.img}`)
+		    document.getElementById(`img aovivo`).setAttribute("src",`/media/${data.live}live.jpg`)
                 }else{
                     throw "erro no api do servidor"
                 }
@@ -85,3 +79,4 @@
 </script>
 
 {% endblock %}
+

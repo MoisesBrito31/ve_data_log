@@ -5,7 +5,7 @@
 <div class="card-title mt-5 mb-3 pt-3">
     <div class="row">
         <div class="col text-left">
-            <h2>Fábrica Visão Geral</h2>
+            <h2>Inspetor L503 Env 2</h2>
         </div>
     </div>
 </div>
@@ -16,47 +16,35 @@
 <div class="container-fluid row m-auto">
     {% for l in dados%}
         <div class="col-auto">
-            <div class="bg-light text-center border rounded mb-5 p-2" style="min-width:250px; max-width:300px;" onclick="document.location.href='/cameras/index/{{ l.id }}'">
+            <div class="bg-light text-center border rounded mb-5 p-2" style="min-width:250px; max-width:600px;" onclick="document.location.href='/cameras/index/{{ l.id }}'">
                 <h3 >{{ l.nome }}</h3>
                 <div>
-                    <img id="img {{l.id}}" src="{% static 'img/ve.png' %}" height="80">
+			
+		<img id="img {{l.id}}" src="/media/{{l.live}}live.bmp" height="300">
+                    <!--<iframe src="http://{{l.ip}}/liveimage.html"></iframe> -->
+                    <!--img id="img {{l.id}}" src="{% static 'img/ve.png' %}" height="80"-->
                 </div>
-                <div >
-                    <div class="row">
-                        <div class="col text-center form-group">
-                            <div class="text-center">Total de Garr.</div>
-                           <span id="gar {{l.id}}" class="text-success">{{l.garrafas}}</span> 
-                        </div>
-                        <div class="col text-center form-group">
-                            <div class="text-center">Garr. Faltantes</div>
-                            <span id="fal {{l.id}}" class="text-danger">{{l.faltantes}}</span> 
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col text-center form-group">
-                            <div class="text-center">Cx. Aprovadas</div>
-                           <span id="apr {{l.id}}" class="text-success">{{l.aprovado}}</span> 
-                        </div>
-                        <div class="col text-center form-group">
-                            <div class="text-center">Cx. Reprovadas<div>
-                            <span id="rep {{l.id}}" class="text-danger">{{l.reprovado}}</span> 
-                        </div>
-                    </div>
+                 <div>
+                     <h4><p>Aprovados : <span id="apr {{l.id}}" class="text-success"></span></p></h4>
+                     <h4><p>Reprovados : <span id="rep {{l.id}}" class="text-danger"></span></p></h4>
+                 </div>
+                 <div>
+                    
+                    <button class="btn btn-block btn-primary" type="button" onclick="document.location.href='/cameras/index/{{ l.id }}'">Detalhes</button>
+                    <button id="vision" class="btn btn-block btn-primary" type="button" onclick="chamaVision()">
+                        Vision Manage
+                    </button>
                 </div>
-                
-            </div>
-                </div>
-                <div>
-                    <h4><p id="sta {{ l.id }}" class="p-2 rounded border border-dark text-center m-auto"> {{ l.status }}</p>    </h4>            
-                </div>
-                
         </div>
-        </div>
-        <div>
+                
+                
+       
+        <!--div>
             <button class="btn btn-block btn-warning" type="button" onclick="zerar()">Zerar</button>
-        </div>
+        </div-->
+    </div>
     {% endfor %}
-    
+       
 </div>
 
 <script>
@@ -82,9 +70,10 @@ setInterval(function () {
                     for(var x =0 ; x<data.length; x++){
                         document.getElementById(`apr ${data[x].id}`).innerHTML = data[x].aprovado
                         document.getElementById(`rep ${data[x].id}`).innerHTML = data[x].reprovado
-                        document.getElementById(`gar ${data[x].id}`).innerHTML = data[x].total
-                        document.getElementById(`fal ${data[x].id}`).innerHTML = data[x].faltantes
-                        document.getElementById(`sta ${data[x].id}`).innerHTML = data[x].status
+			document.getElementById(`img ${data[x].id}`).src = `/media/${data[x].live}live.bmp`
+                        //document.getElementById(`gar ${data[x].id}`).innerHTML = data[x].total
+                        //document.getElementById(`fal ${data[x].id}`).innerHTML = data[x].faltantes
+                        //document.getElementById(`sta ${data[x].id}`).innerHTML = data[x].status
                     }   
                 }else{
                     throw "erro no api do servidor"
@@ -94,8 +83,35 @@ setInterval(function () {
             });
         }
 
-        async function zerar(){
+    async function zerar(){
             var retor = await fetch(`{% url 'camera_zerar' %}`,{
+            }).then(response=>{
+                if(response.status===200){
+                    return response.text()
+                }else{
+                    this.erro = true
+                    if(response.status===401){throw "Você não tem Autorização"}
+                    else if(response.status===404){throw "Dados Inexistentes"}
+                    else{throw "erro no api do servidor"}
+                }          
+            }).then(res=>{
+                if(res!==undefined){
+                    if (res==="ok"){
+                        toastr.success("Ação executada", "Sucesso")
+                    }
+                    else{
+                        toastr.error("não foi possível executar a ação", "Falha")
+                    }
+                }else{
+                    throw "erro no api do servidor"
+                }
+            }).catch(erro=>{
+                console.log(erro)
+            });
+        }
+
+    async function chamaVision(){
+            var retor = await fetch("/cameras/visionmanage",{
             }).then(response=>{
                 if(response.status===200){
                     return response.text()

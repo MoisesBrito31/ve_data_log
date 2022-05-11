@@ -1,0 +1,22 @@
+start chrome --kiosk --fullscreen http://localhost:8000   #inicia o chrome no modo kiosk 
+
+cd C:\Program Files (x86)\Banner Engineering\Vision Manager
+start Vision_Manager.exe                                    #inicia o software da banner
+
+explorer %appdata%\Microsoft\windows\start menu\programs\startup #abre a pasta 
+                                                                 que executa quando inicia o windows
+
+sc create [nome do serviço] 
+binPath= "[local do executavel]" 
+DisplayName= "[descrição do serviço]" 
+start= auto                                            # criação de serviço
+
+sc start [nome do serviço]    # inicia um serviço ja criado
+
+sc stop [nome do serviço]    # para um serviço ja criado
+
+sc delete [nome do serviço]   # deleta um serviço
+
+sc query      # lista os serviços do windows
+
+sc create dxm binPath="C:\git\ve_data_log\init.cmd" DisplayName="dxm web interface" start=auto

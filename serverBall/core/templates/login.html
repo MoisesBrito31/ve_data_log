@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block context %}
+
+
+<div class="row mt-5 pt-5">
+    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin m-auto" style="max-width: 450px;">
+            <div class="mx-auto my-4">
+                <img src="{% static 'img/dxmWebInterface.png' %}" height="140" />
+            </div>
+            <div class="card-body">
+                <h5 class="card-title text-center">Login de Usuário</h5>
+                <form class="form-signin" method="POST" action="{% url 'login' %}">
+                    {% csrf_token %}
+                    <div class="form-label-group">
+                        <label for="Nome">E-Mail</label>
+                        <input type="email" name="email" id="Nome" class="form-control" style="max-width: 100%" placeholder="e-mail">
+                    </div>
+
+                    <div class="form-label-group mb-4">
+                        <label for="Senha">Senha</label>
+                        <input type="password" name="senha" id="Senha" class="form-control" style="max-width: 100%" placeholder="Senha"
+                             onclick="clearMsg()">
+                    </div>
+
+                    <button type="submit" id="butLogar" class="btn btn-lg btn-primary btn-block text-uppercase borde">Sign in</button>
+                    <div class="form-check mx-auto text-center my-1">
+                        <!--<a href="#">Esqueci minha Senha</a>-->
+                    </div>
+                    {% if msg != 'ok' and msg != '' %}
+                    <div id="falha" class="alert-danger mb-4 h-100 p-2 text-center">
+                        {{ msg }} - Usuário ou senha incoretos
+                    </div>
+                    {% endif %}
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    function clearMsg() {
+        document.getElementById("msg").innerHTML = ""
+    }
+</script>
+
+{% endblock %}

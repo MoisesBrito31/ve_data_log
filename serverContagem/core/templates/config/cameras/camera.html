@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block context %}
+
+<div class="card-title mt-5 mb-3 pt-3">
+    <div class="row">
+        <div class="col text-left">
+            <h2>Câmera {{dados.nome}} </h2>
+        </div>
+        <div class="col text-right">
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary" onclick="window.location.href='/cameras/'">Fábrica</button>
+                <button type="button" class="btn btn-primary disabled">ao vivo</button>               
+                <button type="button" class="btn btn-primary" onclick="window.location.href='/cameras/hist/{{dados.id}}/'">Histórico</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr>
+<div class="container-fluid row m-auto">
+    <div class="col-alto">
+        <div class="text-center h3">Ultima Rejeição</div>
+        <img id="img" src="/{{dados.img}}" height="500px">
+    </div>
+    <div class="col-auto m-auto">
+        <div class="row">
+            <div class="col text-center form-group">
+                <div class="text-center h3">Total de Garr.</div>
+               <span id="gar" class="text-success h1">{{dados.total}}</span> 
+            </div>
+            <div class="col text-center form-group">
+                <div class="text-center h3">Garr. Faltantes</div>
+                <span id="fal" class="text-danger h1">{{dados.faltantes}}</span> 
+            </div>
+        </div>
+        <div class="row mb-5 mt-5 pt-5 pb-5">
+            <div class="col text-center form-group">
+                <div class="text-center h3">Cx. Aprovadas</div>
+               <span id="apr" class="text-success h1">{{dados.aprovado}}</span> 
+            </div>
+            <div class="col text-center form-group">
+                <div class="text-center h3">Cx. Reprovadas</div>
+                <span id="rep" class="text-danger h1">{{dados.reprovado}}</span> 
+            </div>
+        </div>
+       
+    </div>
+</div>
+
+<script>
+    setInterval(function () {
+        camera();
+    }, 1000)
+
+    async function camera(){
+            var retor = await fetch(`/cameras/camerajson/{{dados.id}}`,{
+            }).then(response=>{
+                if(response.status===200){
+                    return response.text()
+                }else{
+                    this.erro = true
+                    if(response.status===401){throw "Você não tem Autorização"}
+                    else if(response.status===404){throw "Dados Inexistentes"}
+                    else{throw "erro no api do servidor"}
+                }          
+            }).then(res=>{
+                if(res!==undefined){
+                    console.log(res)
+                    data = JSON.parse(res)
+                    document.getElementById(`apr`).innerHTML = data.aprovado
+                    document.getElementById(`rep`).innerHTML = data.reprovado
+                    document.getElementById('gar').innerHTML = data.total
+                    document.getElementById('fal').innerHTML = data.faltantes                  
+                    document.getElementById(`img`).setAttribute("src",`/${data.img}`)
+                }else{
+                    throw "erro no api do servidor"
+                }
+            }).catch(erro=>{
+                console.log(erro)
+            });
+        }
+
+   
+
+</script>
+
+{% endblock %}

@@ -3,13 +3,13 @@ from django.views.generic import View
 from core.views import logado, UserPermission
 from datetime import datetime, timedelta
 from .models import Camera, Imagem
-from .drive import *
-from .ve_cont_garrafas import *
-from .ve_cont_garrafas import camera as zerarfunc
+from .drive2 import *
+#from .ve_cont_garrafas import *
+#from .ve_cont_garrafas import camera as zerarfunc
 from threading import Thread
 from django.db.models import Q
 from pyModbusTCP.client import ModbusClient as Modbus
-
+import os
 
 
 class CameraZera(View):
@@ -30,10 +30,15 @@ class CameraJson(View):
     def get(self,request,valor):
         dados = Camera.objects.get(id=valor)
         if UserPermission(request,nivel_min=2):
-            ret = f'{{\"img\":\"{dados.img}\",\"faltantes\":{dados.faltantes},\"total\":{dados.garrafas},\"aprovado\":{dados.aprovado},\"reprovado\":{dados.reprovado}}}'
+            ret = f'{{\"live\":\"{dados.ip.split(".")[3]}\",\"ip\":\"{dados.ip}\",\"img\":\"{dados.img}\",\"faltantes\":{dados.faltantes},\"total\":{dados.garrafas},\"aprovado\":{dados.aprovado},\"reprovado\":{dados.reprovado}}}'
             return HttpResponse(ret)
         else:
             return HttpResponse('falha')
+
+class CameraVisionCall(View):
+    def get(self,request):
+        os.system("vision.cmd")
+        return HttpResponse('ok')
 
 class CamerasJson(View):
     def get(self,request):
@@ -41,7 +46,7 @@ class CamerasJson(View):
         ret = '['
         if UserPermission(request,nivel_min=2):
             for c in dados:
-                ret = f'{ret}{{\"id\":{c.id},\"status\":\"{c.status}\",\"faltantes\":{c.faltantes},\"total\":{c.garrafas},\"aprovado\":{c.aprovado},\"reprovado\":{c.reprovado}}},'
+                ret = f'{ret}{{\"live\":\"{c.ip.split(".")[3]}\",\"ip\":\"{c.ip}\",\"id\":{c.id},\"status\":\"{c.status}\",\"faltantes\":{c.faltantes},\"total\":{c.garrafas},\"aprovado\":{c.aprovado},\"reprovado\":{c.reprovado}}},'
             ret = ret[:len(ret)-1]+']'
             return HttpResponse(ret)
         else:
@@ -107,3 +112,7 @@ class HistoricoView(View):
                             'fim': fims
                         },dados=dado,nivel_min=2)
 
+class ImageView(View):
+    def get(self,request,valor):
+        dados = Imagem.objects.get(id=valor)
+        return logado('config/cameras/image.html',request,dados=dados,titulo='Imagem',nivel_min=1)
