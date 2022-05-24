@@ -1,6 +1,8 @@
 import socket, threading
-import os
-from datetime import datetime, timedelta
+import urllib.request
+import sys
+from PIL import Image
+from datetime import datetime
 from time import sleep
 from threading import Thread
 from .models import Camera, Imagem
@@ -179,6 +181,20 @@ class Protocol():
             sleep(2)
             return resposta
 
+def readLive(cameras):
+    while not fim_Programa.is_set():
+        sleep(2)
+        for c in cameras:
+            idcam =c.ip.split('.')[3]
+            try:
+                urllib.request.urlretrieve(f'http://{c.ip}/sensor/liveimagewidth640height480.bmp', f'media/{idcam}live.bmp')
+                imagem = Image.open(f'media/{idcam}live.bmp').convert("RGB")
+                imagem.save(f'media/{idcam}live.jpg')
+                print(f"Imagem salva camera {c.ip}")
+            except:
+                erro = sys.exc_info()
+                print("Ocorreu um erro:", erro)
+
 def c1_img_loop(cam):
     print(f'iniciou camera {cam.IP}')
     while not fim_Programa.is_set():
@@ -224,6 +240,7 @@ def mainCicle():
         camera = Protocol(c.ip,c.porta_img)
         thrs.append(Thread(target=c1_img_loop,args=(camera,)))
         thrs.append(Thread(target=c_data_loop,args=(camera,)))
+        thrs.append(Thread(target=readLive,args=(camera,)))
     for t in thrs:
         t.start()
     t_relogio = threading.Thread(target=atualizaRelogio).start()

@@ -1,6 +1,8 @@
 import socket
 from datetime import datetime
 from time import sleep
+import urllib.request
+from PIL import Image
 
 """
 
@@ -29,8 +31,9 @@ class DriveImg():
     port = 32200
     onLine = False
 
-    def __init__(self, ip, port):
+    def __init__(self, ip, port, pasta = "media/"):
         gravaLog(ip=self.ip,msg=f'iniciou drive')
+        self.pasta = pasta
         self.ip=ip
         self.port = port
         self.trans = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
@@ -88,10 +91,10 @@ class DriveImg():
                 try:
                     nomeFile = f'{hoje.day}{hoje.month}{hoje.year}-{idcam[3]}-{frame}'
                     if isJpeg==1:
-                        file = open(f'media/{nomeFile}.jpg','wb')
+                        file = open(f'{self.pasta}{nomeFile}.jpg','wb')
                         nomeFile = f'{nomeFile}.jpg'
                     else:
-                        file = open(f'media/{nomeFile}.bmp','wb')
+                        file = open(f'{self.pasta}{nomeFile}.bmp','wb')
                         nomeFile = f'{nomeFile}.bmp'
                     file.write(data)
                     file.close()
@@ -106,6 +109,17 @@ class DriveImg():
             self.onLine = False
             sleep(2)
             return resposta
+    
+    def readLive(self):
+        idcam =self.ip.split('.')[3]
+        try:
+            urllib.request.urlretrieve(f'http://{self.ip}/sensor/liveimagewidth640height480.bmp', f'{self.pasta}{idcam}live.bmp')
+            imagem = Image.open(f'{self.pasta}{idcam}live.bmp').convert("RGB")
+            imagem.save(f'{self.pasta}{idcam}live.jpg')
+            return f'{idcam}live.jpg'
+        except Exception as ex:
+            gravaLog(ip=self.ip,tipo="Falha readLive",msg=f'erro {str(ex)}')
+            return "Falha"
 
 class DriveData():
     HEADERSIZE = 100

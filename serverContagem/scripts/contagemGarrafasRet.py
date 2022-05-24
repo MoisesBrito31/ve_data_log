@@ -50,6 +50,13 @@ def img_loop(cam,index):
             cam.save()
             arq.save()
 
+def img_live_loop(cam):
+    print(f'iniciou Live imagem {cam.IP}')
+    while not fim_Programa.is_set():
+        cam.readLive()
+        sleep(1)
+
+
 def data_loop(contagem):
     print(f'iniciou data {contagem.ip}')
     while not fim_Programa.is_set():
@@ -77,6 +84,7 @@ def mainCicle():
         camera = DriveImg(c.ip,c.porta_img)
         contagens.append(Contagem(c))
         thrs.append(threading.Thread(target=img_loop,args=(camera,number)))
+        thrs.append(threading.Thread(target=img_live_loop,args=(camera,)))
         thrs.append(threading.Thread(target=data_loop,args=(contagens[number],)))
         number+=1
     for t in thrs:
