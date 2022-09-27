@@ -26,22 +26,30 @@
     <div class="col-auto m-auto">
         <div class="row">
             <div class="col text-center form-group">
-                <div class="text-center h3">Total de Garr.</div>
-               <span id="gar" class="text-success h1">{{dados.total}}</span> 
+                <div class="text-center h5">Total de Garr.</div>
+               <span id="gar" class="text-success h2">{{dados.total}}</span> 
             </div>
             <div class="col text-center form-group">
-                <div class="text-center h3">Garr. Faltantes</div>
-                <span id="fal" class="text-danger h1">{{dados.faltantes}}</span> 
+                <div class="text-center h5">Garr. Faltantes</div>
+                <span id="fal" class="text-danger h2">{{dados.faltantes}}</span> 
+            </div>
+            <div class="col text-center form-group">
+                <div class="text-center h5">Percentual</div>
+                <span id="PGar" class="text-primary h2">{{dados.perGarrafa}} %</span> 
             </div>
         </div>
         <div class="row mb-5 mt-5 pt-5 pb-5">
             <div class="col text-center form-group">
-                <div class="text-center h3">Cx. Aprovadas</div>
-               <span id="apr" class="text-success h1">{{dados.aprovado}}</span> 
+                <div class="text-center h5">Cx Aprovada</div>
+               <span id="apr" class="text-success h2">{{dados.aprovado}}</span> 
             </div>
             <div class="col text-center form-group">
-                <div class="text-center h3">Cx. Reprovadas</div>
-                <span id="rep" class="text-danger h1">{{dados.reprovado}}</span> 
+                <div class="text-center h5">Cx Reprovada</div>
+                <span id="rep" class="text-danger h2">{{dados.reprovado}}</span> 
+            </div>
+            <div class="col text-center form-group">
+                <div class="text-center h5">Percentual</div>
+                <span id="Pcaixa" class="text-primary h2">{{dados.perCaixa}} %</span> 
             </div>
         </div>
        
@@ -71,7 +79,9 @@
                     document.getElementById(`apr`).innerHTML = data.aprovado
                     document.getElementById(`rep`).innerHTML = data.reprovado
                     document.getElementById('gar').innerHTML = data.total
-                    document.getElementById('fal').innerHTML = data.faltantes                  
+                    document.getElementById('fal').innerHTML = data.faltantes 
+                    document.getElementById('Pcaixa').innerHTML = `${data.perCaixa} %`          
+                    document.getElementById('PGar').innerHTML = `${data.percGarrafa} %`                       
                     document.getElementById(`img`).setAttribute("src",`/${data.img}`)
                 }else{
                     throw "erro no api do servidor"

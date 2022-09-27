@@ -30,7 +30,9 @@ class CameraJson(View):
     def get(self,request,valor):
         dados = Camera.objects.get(id=valor)
         if UserPermission(request,nivel_min=2):
-            ret = f'{{\"img\":\"{dados.img}\",\"faltantes\":{dados.faltantes},\"total\":{dados.garrafas},\"aprovado\":{dados.aprovado},\"reprovado\":{dados.reprovado}}}'
+            percentFaltantes = str(dados.faltantes/(dados.garrafas+dados.faltantes)*100)[:5]
+            percentCaixas = str(dados.reprovado/(dados.aprovado+dados.reprovado)*100)[:5]
+            ret = f'{{\"img\":\"{dados.img}\",\"faltantes\":{dados.faltantes},\"total\":{dados.garrafas},\"aprovado\":{dados.aprovado},\"reprovado\":{dados.reprovado},\"percGarrafa\":{percentFaltantes},\"perCaixa\":{percentCaixas}}}'
             return HttpResponse(ret)
         else:
             return HttpResponse('falha')
