@@ -1,0 +1,8 @@
+primeiro mova o arquivo .service para a pasta /etc/systemd/system :
+
+sudo cp dxm.service /etc/systemd/system
+
+depois abilite o serviço para iniciar junto do sistema :
+
+sudo systemctl enable dxm
+

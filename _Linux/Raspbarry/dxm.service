@@ -1,0 +1,10 @@
+[Unit]
+Description = Dxm web Interface OEE Python3
+
+[Service]
+Type=simple
+RemainAfterExit=yes
+ExecStart=/root/main.sh
+
+[Install]
+WantedBy=multi-user.target

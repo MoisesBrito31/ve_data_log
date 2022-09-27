@@ -1,0 +1,10 @@
+[Unit]
+Description = abri o navegador em leta cheia no start
+
+[Service]
+Type=simple
+RemainAfterExit=yes
+ExecStart=/home/orangepi/app/kiosk/kiosk.sh
+
+[Install]
+WantedBy=multi-user.target
