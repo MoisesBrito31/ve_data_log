@@ -1,10 +1,16 @@
 [Unit]
-Description = abri o navegador em leta cheia no start
-
+Description=Chromium Kiosk
+Wants=graphical.target
+After=graphical.target
+ 
 [Service]
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=/home/pi/.Xauthority
 Type=simple
-RemainAfterExit=yes
-ExecStart=/home/orangepi/app/kiosk/kiosk.sh
-
+ExecStart=/bin/bash /home/pi/app/ve_data_log/_Linux/OrangePi/kiosk/kiosk.sh
+Restart=on-abort
+User=orangepi
+Group=orangepi
+ 
 [Install]
-WantedBy=multi-user.target
+WantedBy=graphical.target

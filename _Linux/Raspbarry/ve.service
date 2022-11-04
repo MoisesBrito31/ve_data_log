@@ -1,0 +1,10 @@
+[Unit]
+Description = Systema de gerenciamento da Camera VE
+
+[Service]
+Type=simple
+RemainAfterExit=yes
+ExecStart=/home/pi/app/ve_data_log/_Linux/Raspbarry/ve.sh
+
+[Install]
+WantedBy=multi-user.target

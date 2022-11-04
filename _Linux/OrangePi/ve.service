@@ -1,0 +1,10 @@
+[Unit]
+Description = Systema de gerenciamento da Camera VE
+
+[Service]
+Type=simple
+RemainAfterExit=yes
+ExecStart=/home/orangepi/app/ve_data_log/_Linux/OrangePi/ve.sh
+
+[Install]
+WantedBy=multi-user.target

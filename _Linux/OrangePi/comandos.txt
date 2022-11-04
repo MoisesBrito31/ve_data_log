@@ -12,7 +12,7 @@ pip install virtualenv
 
 navegue ate a pasta onde esta server desejado para a instalação:
 
-exemplo: cd /home/pi/app/ve_data_log/serverContagem
+exemplo: cd /home/orangepi/app/ve_data_log/serverContagem
 
 crie a pasta do ambiente virtual:
 

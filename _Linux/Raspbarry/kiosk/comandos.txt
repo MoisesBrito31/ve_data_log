@@ -1,0 +1,30 @@
+--> configurando ambiente: 
+
+Primeiro desinstalar pacotes que podem entrar em conflito:
+
+""sudo apt-get purge wolfram-engine scratch scratch2 nuscratch sonic-pi idle3 -y
+""sudo apt-get purge smartsim java-common minecraft-pi libreoffice* -y
+
+limpando o apt-get:
+
+"sudo apt-get clean
+"sudo apt-get autoremove -y
+
+
+
+--> instalando o serviço:
+
+navegue no prompt ate a pasta onde encontra-se esses arquivos,
+
+forneça acesso de administrador ao arquivo .sh:
+
+"sudo chmod 777 kiosk.sh
+
+depois mova o arquivo .service para a pasta /etc/systemd/system:
+
+""sudo cp kiosk.service /etc/systemd/system
+
+depois abilite o serviço para iniciar junto do sistema:
+
+""sudo systemctl enable kiosk
+
