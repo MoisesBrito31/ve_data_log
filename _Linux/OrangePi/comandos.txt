@@ -14,6 +14,8 @@ navegue ate a pasta onde esta server desejado para a instalação:
 
 exemplo: cd /home/orangepi/app/ve_data_log/serverContagem
 
+se dentro dessa pasta não tiver uma pasta chamada media, crie uma vazia com esse nome
+
 crie a pasta do ambiente virtual:
 
 sudo virtualenv venv.
