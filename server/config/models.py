@@ -10,8 +10,6 @@ class Camera(Base):
     status = models.CharField('status',max_length=15)
     aprovado = models.IntegerField('Aprovações',default=0)
     reprovado = models.IntegerField('Reprovações',default=0)
-    garrafas = models.IntegerField('Total de Garrafas',default=0)
-    faltantes = models.IntegerField('Garrafas Faltantes',default=0)
     img = models.CharField('Ultima Imagem',max_length=200,default='')
 
     class Meta:

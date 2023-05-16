@@ -65,7 +65,7 @@
                     //document.getElementById('gar').innerHTML = data.total
                     //document.getElementById('fal').innerHTML = data.faltantes                  
                     document.getElementById(`img`).setAttribute("src",`/${data.img}`)
-		    document.getElementById(`img aovivo`).setAttribute("src",`/media/${data.live}live.jpg`)
+		    document.getElementById(`img aovivo`).setAttribute("src",`/media/${data.live}live.jpg?${Math.random()}`)
                 }else{
                     throw "erro no api do servidor"
                 }

@@ -1,0 +1,158 @@
+[2023-05-16 10:54:21.513944] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 10:54:32.563615] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 10:54:43.618285] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 10:54:54.679950] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 10:55:05.720626] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 10:55:16.759304] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 10:55:27.817971] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 10:55:38.883635] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 10:55:49.981278] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 10:56:01.056936] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 10:56:12.100611] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 10:56:23.157279] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 10:56:34.209950] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 10:56:45.260622] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 10:56:56.306294] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 10:57:07.341975] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 10:57:18.396644] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 10:57:29.447315] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 10:57:40.567948] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 10:57:51.609624] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 10:58:02.680283] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 10:58:13.722960] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 10:58:24.786625] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 10:58:35.868276] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 10:58:46.926945] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 10:58:57.967620] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 10:59:09.035281] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 10:59:20.112938] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 10:59:31.176601] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 10:59:42.242264] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 10:59:53.276946] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:00:04.319623] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:00:15.372292] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:00:26.430959] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:00:37.528604] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:00:48.555288] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:00:59.617953] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:01:10.684615] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:01:21.759272] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:01:32.806946] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:01:43.845624] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:01:54.901293] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:02:05.941970] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:02:16.982646] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:02:28.028322] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:02:39.081990] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:02:50.113673] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:03:01.142357] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:03:12.183035] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:03:23.227709] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:03:34.273383] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:03:45.328053] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:03:56.413705] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:04:07.476369] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:04:18.526041] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:04:29.618687] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:04:40.688348] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:04:51.792993] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:05:02.861649] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:05:13.932309] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:05:24.978983] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:05:36.023658] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:05:47.078327] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:05:58.149986] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:06:09.245632] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:06:20.297306] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:06:31.372960] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:06:42.419634] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:06:53.504286] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:07:04.573951] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:07:15.609628] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:07:26.733256] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:07:37.792922] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:07:48.965525] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:08:00.014196] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:08:11.083856] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:08:22.164510] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:08:33.271149] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+
+[2023-05-16 11:16:33.855923] - [Falha] - falha no ciclo modbus- 'Camera' object has no attribute 'read_data_Modbus'
+

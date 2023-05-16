@@ -181,19 +181,19 @@ class Protocol():
             sleep(2)
             return resposta
 
-def readLive(cameras):
+def readLive(c):
     while not fim_Programa.is_set():
-        sleep(2)
-        for c in cameras:
-            idcam =c.ip.split('.')[3]
-            try:
-                urllib.request.urlretrieve(f'http://{c.ip}/sensor/liveimagewidth640height480.bmp', f'media/{idcam}live.bmp')
-                imagem = Image.open(f'media/{idcam}live.bmp').convert("RGB")
-                imagem.save(f'media/{idcam}live.jpg')
-                print(f"Imagem salva camera {c.ip}")
-            except:
-                erro = sys.exc_info()
-                print("Ocorreu um erro:", erro)
+        try:
+            idcam =c.IP.split('.')[3]
+            urllib.request.urlretrieve(f'http://{c.IP}/sensor/liveimagewidth640height480.bmp', f'media/{idcam}live.bmp')
+            imagem = Image.open(f'media/{idcam}live.bmp').convert("RGB")
+            imagem.save(f'media/{idcam}live.jpg')
+            #print(f"Imagem salva camera {c.IP}")
+            sleep(1)
+        except:
+            erro = sys.exc_info()
+            print("Ocorreu um erro:", erro)
+            sleep(10)
 
 def c1_img_loop(cam):
     print(f'iniciou camera {cam.IP}')
@@ -203,30 +203,35 @@ def c1_img_loop(cam):
 def c_data_loop(cam):
     print(f'iniciou camera {cam.IP}')
     while not fim_Programa.is_set():
-        valor =cam.read_data_Modbus(8,4)
-        if valor:
-            #print(f'retorno:{valor}')
-            aprovados = valor[0]+valor[1]*65536
-            reprovados = valor[2]+valor[3]*65536
-            #print(f'aprovados: {aprovados} , reprovados: {reprovados}')
-            try:
-                came = Camera.objects.get(ip=cam.IP)
-                came.status= 'Online'
-                came.reprovado = reprovados
-                came.aprovado = aprovados
-                came.save()
-            except:
-                pass
-        else:
-            #print('camera OffLine')
-            try:
-                cam.proto = Modbus(host=cam.IP,port=502)
-                cam.proto.open()
-                cam = Camera.objects.get(ip=cam.IP)
-                cam.status= 'OffLine'
-                cam.save()
-            except:
-                pass
+        try:
+            valor =cam.read_data_Modbus(8,4)
+            if valor:
+                #print(f'retorno:{valor}')
+                aprovados = valor[0]+valor[1]*65536
+                reprovados = valor[2]+valor[3]*65536
+                #print(f'aprovados: {aprovados} , reprovados: {reprovados}')
+                try:
+                    came = Camera.objects.get(ip=cam.IP)
+                    came.status= 'Online'
+                    came.reprovado = reprovados
+                    came.aprovado = aprovados
+                    came.save()
+                except:
+                    pass
+            else:
+                #print('camera OffLine')
+                try:
+                    cam.proto = Modbus(host=cam.IP,port=502)
+                    cam.proto.open()
+                    cam = Camera.objects.get(ip=cam.IP)
+                    cam.status= 'OffLine'
+                    cam.save()
+                except:
+                    pass
+        except Exception as EX:
+            gravaLog(tipo="Falha",msg=f'falha no ciclo modbus- {str(EX)}',file='data falha.txt')
+            print(f'falha no ciclo modbus- {str(EX)}')
+            sleep(10)
         sleep(1)
 
 

@@ -70,7 +70,7 @@ setInterval(function () {
                     for(var x =0 ; x<data.length; x++){
                         document.getElementById(`apr ${data[x].id}`).innerHTML = data[x].aprovado
                         document.getElementById(`rep ${data[x].id}`).innerHTML = data[x].reprovado
-			document.getElementById(`img ${data[x].id}`).src = `/media/${data[x].live}live.bmp`
+			document.getElementById(`img ${data[x].id}`).src = `/media/${data[x].live}live.bmp?${Math.random()}`
                         //document.getElementById(`gar ${data[x].id}`).innerHTML = data[x].total
                         //document.getElementById(`fal ${data[x].id}`).innerHTML = data[x].faltantes
                         //document.getElementById(`sta ${data[x].id}`).innerHTML = data[x].status
@@ -83,33 +83,7 @@ setInterval(function () {
             });
         }
 
-    async function zerar(){
-            var retor = await fetch(`{% url 'camera_zerar' %}`,{
-            }).then(response=>{
-                if(response.status===200){
-                    return response.text()
-                }else{
-                    this.erro = true
-                    if(response.status===401){throw "Você não tem Autorização"}
-                    else if(response.status===404){throw "Dados Inexistentes"}
-                    else{throw "erro no api do servidor"}
-                }          
-            }).then(res=>{
-                if(res!==undefined){
-                    if (res==="ok"){
-                        toastr.success("Ação executada", "Sucesso")
-                    }
-                    else{
-                        toastr.error("não foi possível executar a ação", "Falha")
-                    }
-                }else{
-                    throw "erro no api do servidor"
-                }
-            }).catch(erro=>{
-                console.log(erro)
-            });
-        }
-
+   
     async function chamaVision(){
             var retor = await fetch("/cameras/visionmanage",{
             }).then(response=>{
